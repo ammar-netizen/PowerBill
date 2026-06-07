@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="PowerBill"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ElectricityBill">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="PowerBill"
+            android:theme="@style/Theme.ElectricityBill.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="PowerBill" />
+
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="Bill History"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false"
+            android:label="Bill Detail"
+            android:parentActivityName=".HistoryActivity" />
+
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false"
+            android:label="About"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
+
+</manifest>
